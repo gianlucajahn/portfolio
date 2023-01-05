@@ -28,9 +28,7 @@ export default function LanguageSwitch() {
         return;
     }
     localStorage.setItem("language", state.language);
-    setTimeout(() => {
-        window.location.reload();
-      }, 100)
+    window.location.reload();
   }, [renderAmount])
 
   const switchLanguage = (e: React.MouseEvent) => {
