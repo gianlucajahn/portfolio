@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./Hero.scss";
 import { motion } from "framer-motion";
+import { store } from "../../App";
 
 export default function Hero() {
+  const [state, dispatch] = useContext(store);
+
   return (
     <div className="container-hero">
       <motion.div
@@ -40,7 +43,7 @@ export default function Hero() {
           y: { duration: 0.6, type: "spring" },
         }}
       >
-        Frontend-Entwickler
+        {state.language === "english" ? "Frontend-Entwickler" : "Frontend Developer"}
       </motion.h1>
 
       <motion.h4
@@ -52,8 +55,7 @@ export default function Hero() {
           y: { duration: 0.55, type: "spring" },
         }}
       >
-        Freund des kreativen Prozesses, lebenslangen Lernens und des ständigen
-        Wandels der Frontend-Welt.
+        {state.language === "english" ? "Freund des kreativen Prozesses, lebenslangen Lernens und des ständigen Wandels der Frontend-Welt." : "I believe in creative processes & lifelong learning. I am always curious for new best practices and workflows."}
       </motion.h4>
 
       <motion.button
@@ -65,7 +67,7 @@ export default function Hero() {
           y: { duration: 0.4, type: "spring" },
         }}
       >
-        <h3>Mehr erfahren</h3>
+        <h3>{state.language === "english" ? "Mehr erfahren" : "Find out more"}</h3>
         <img src={require("../../assets/images/arrow.png")} />
       </motion.button>
     </div>
