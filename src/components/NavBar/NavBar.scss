@@ -5,7 +5,9 @@
 
 nav {
     display: flex;
-    margin-top: 1.235em;
+    z-index: 40;
+    position: fixed;
+    top: 1.235em;
     border-radius: 38px;
     background-color: rgba(255, 255, 255, 0.5);
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3);
