@@ -1,5 +1,5 @@
 #cursor {
-    position: absolute;
+    position: fixed;
     top: 10px;
     left: 10px;
     width: 22px;
@@ -15,4 +15,8 @@
     width: 19px !important;
     height: 19px !important;
     background-color: rgba(0, 0, 0, 0.4) !important;
+}
+
+.disappear {
+    background-color: transparent !important;
 }

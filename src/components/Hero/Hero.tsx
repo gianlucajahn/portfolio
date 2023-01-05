@@ -55,7 +55,7 @@ export default function Hero() {
           y: { duration: 0.55, type: "spring" },
         }}
       >
-        {state.language === "english" ? "Freund des kreativen Prozesses, lebenslangen Lernens und des ständigen Wandels der Frontend-Welt." : "I believe in creative processes & lifelong learning. I am always curious for new best practices and workflows."}
+        {state.language === "english" ? "Fan von kreativen Prozessen, lebenslangem Lernen und des ständigen Wandels der Frontend-Welt." : "I believe in creative processes & lifelong learning. I am always curious for new best practices and workflows."}
       </motion.h4>
 
       <motion.button

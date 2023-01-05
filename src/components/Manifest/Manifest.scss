@@ -1,0 +1,15 @@
+.container-manifest {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+
+    h1 {
+        font-family: "Inter", sans-serif;
+        font-size: 87px;
+        line-height: 1.05;
+        letter-spacing: -0.04em;
+        max-width: 1200px;
+        text-align: center;
+    }
+}

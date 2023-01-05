@@ -8,6 +8,7 @@ import Cursor from "./components/Cursor/Cursor";
 import setCursorAppearance from "./utils/helpers/setCursorAppearance";
 import reducer from "./reducers/reducer";
 import sampleStore from "./utils/samples/sampleStore";
+import Manifest from "./components/Manifest/Manifest";
 
 // Create store (redux naming convention)
 export const store = createContext<any>(null);
@@ -25,6 +26,7 @@ function App() {
       <div
         className="App"
         onMouseMove={(e) => setCursorLocation(e)}
+        onScroll={(e) => setCursorLocation(e)}
         onMouseDown={(e) => setCursorAppearance(e)}
         onMouseUp={(e) => setCursorAppearance(e)}
       >
@@ -32,6 +34,7 @@ function App() {
         <NavBar />
         <LanguageSwitch />
         <Hero />
+        <Manifest />
       </div>
     </StoreProvider>
   );
