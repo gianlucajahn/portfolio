@@ -32,7 +32,7 @@ export default function Hero() {
 
       <motion.h1
         className="title"
-        initial={{ opacity: 0.05, y: 400 }}
+        initial={{ opacity: 0, y: 400 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{
           delay: 0.29,
@@ -44,7 +44,7 @@ export default function Hero() {
       </motion.h1>
 
       <motion.h4
-        initial={{ opacity: 0.05, y: 140 }}
+        initial={{ opacity: 0, y: 140 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{
           delay: 0.5,
@@ -57,7 +57,7 @@ export default function Hero() {
       </motion.h4>
 
       <motion.button
-        initial={{ opacity: 0.05, y: 140 }}
+        initial={{ opacity: 0, y: 140 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{
           delay: 0.7,

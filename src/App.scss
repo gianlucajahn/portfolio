@@ -2,3 +2,20 @@
   display: flex;
   justify-content: center;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button,
+a,
+img,
+p,
+div {
+
+  &:hover {
+    cursor: none;
+  }
+}
