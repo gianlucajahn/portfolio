@@ -1,15 +1,37 @@
+@keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+}
+
 .container-manifest {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 50vh;
+    height: 60vh;
 
-    h1 {
-        font-family: "Inter", sans-serif;
-        font-size: 87px;
-        line-height: 1.05;
-        letter-spacing: -0.04em;
-        max-width: 1200px;
-        text-align: center;
+    .manifest {
+        background: linear-gradient(300deg,#ffb007,#eb5700,#ff2b6a,#ab4bff,#5ca2ff,#df1700);
+        background-size: 360% 360%;
+        animation: gradient-animation 20s ease infinite;
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 90px;
+
+        h1 {
+            font-family: "Inter", sans-serif;
+            font-size: 83px;
+            line-height: 1.05;
+            letter-spacing: -0.04em;
+            max-width: 1200px;
+            text-align: center;
+        }
     }
 }
