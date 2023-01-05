@@ -8,12 +8,13 @@ export default function LanguageSwitch() {
   return (
     <motion.button
       className="btn-language"
-      initial={{ opacity: 0, y: 150 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ type: "spring", duration: 0.7 }}
+      initial={{ y: 150 }}
+      animate={{ y: 0 }}
+      transition={{ type: "tween", duration: 0.3 }}
+      onClick={() => setLanguage(lang => lang === "english" ? "german" : "english")}
     >
       <img src={require(`../../assets/images/${language}.png`)} />
-      Translate to English
+      Translate to {language === "english" ? "English" : "German"}
     </motion.button>
   );
 }
