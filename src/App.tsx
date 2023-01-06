@@ -9,6 +9,7 @@ import setCursorAppearance from "./utils/helpers/setCursorAppearance";
 import reducer from "./reducers/reducer";
 import sampleStore from "./utils/samples/sampleStore";
 import Manifest from "./components/Manifest/Manifest";
+import AboutMe from "./components/AboutMe/AboutMe";
 
 // Create store (redux naming convention)
 export const store = createContext<any>(null);
@@ -35,6 +36,7 @@ function App() {
         <LanguageSwitch />
         <Hero />
         <Manifest />
+        <AboutMe />
       </div>
     </StoreProvider>
   );
