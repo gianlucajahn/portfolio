@@ -1,0 +1,54 @@
+.container-showcase {
+    margin-top: 28px;
+    display: flex;
+    justify-content: space-between;
+    padding: 65px 90px 65px 66px;
+    align-items: center;
+    gap: 245px;
+    border-radius: 32px;
+    background: rgb(231,80,94);
+    background: linear-gradient(90deg, rgba(231,80,94,1) 0%, rgba(203,88,145,1) 35%, rgba(163,100,220,1) 100%);
+
+    .showcase-left {
+        padding-bottom: 22px;
+        display: flex;
+        flex-direction: column;
+        max-width: 440px;
+        gap: 26px;
+
+        h3 {
+            font-family: "Inter", sans-serif;
+            color: white;
+            font-size: 44px;
+            font-weight: 600;
+            letter-spacing: -0.025em;
+            line-height: 1.2;
+            max-width: 400px;
+        }
+
+        p {
+            font-family: "Inter", sans-serif;
+            color: white;
+            opacity: 0.75;
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 1.5;
+            letter-spacing: -0.025em;
+        }
+    }
+
+    .showcase-right {
+        position: relative;
+
+        .screen {
+            height: 370px;
+        }
+
+        .video {
+            position: absolute;
+            z-index: 12;
+            top: 5px;
+            left: 9px;
+        }
+    }
+}

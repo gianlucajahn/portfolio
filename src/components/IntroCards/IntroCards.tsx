@@ -9,7 +9,6 @@ export default function IntroCards () {
 
   return (
     <div className="container-intro">
-      <div className="scroll-trigger" />
       <section className="left-intro big-card">
         <h3>{state.language === "english" ? "React-Entwickler an der Schnittstelle von Design und Code." : "React developer at the intersection between design and code"}</h3>
         <p>{state.language === "english" ? "Angefangen mit HTML, CSS und JavaScript habe ich mir eigenständig das Programmieren beigebracht. Auch jenseits von JavaScript gibt es vieles zu entdecken: Heute arbeite ich mit TypeScript in React, verwende Redux oder Context zum State-Management und nutze SASS als Pre-Processor für CSS. Wie man sieht arbeite ich desweiteren gern mit Motion Libraries - bspw. Framer Motion." : "Starting with HTML, CSS and JavaScript, I taught myself programming on my own. However, nowadays there is a lot to discover far beyond vanilla JavaScript: Today I work with TypeScript in React, use Redux or Context for state management and use SASS as a pre-processor for CSS. As you can see, I also like to work with motion libraries - e.g. Framer Motion."}</p>
@@ -19,7 +18,7 @@ export default function IntroCards () {
         <motion.div className="small-card"
           initial={{ scale: 0 }}
           whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true, root: scrollRef }}
+          viewport={{ once: true }}
         >
             <div className="card-top">
                 <h2 className="num green">200</h2>
@@ -32,7 +31,7 @@ export default function IntroCards () {
             initial={{ scale: 0 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.3 }}
-            viewport={{ once: true, root: scrollRef }}
+            viewport={{ once: true }}
         >
             <div className="card-top">
                 <h2 className="num place blue">{state.language === "english" ? "1. Platz" : "1st place"}</h2>
@@ -43,8 +42,7 @@ export default function IntroCards () {
         <motion.div className="small-card"
             initial={{ scale: 0 }}
             whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.6 }}
-            viewport={{ once: true, root: scrollRef }}
+            viewport={{ once: true }}
         >
             <div className="card-top">
                 <h2 className="num purple">15</h2>
@@ -56,8 +54,8 @@ export default function IntroCards () {
         <motion.div className="small-card"
             initial={{ scale: 0 }}
             whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.9 }}
-            viewport={{ once: true, root: scrollRef }}
+            transition={{ delay: 0.3 }}
+            viewport={{ once: true }}
         >
             <div className="card-top">
                 <h2 className="num red">100</h2>
