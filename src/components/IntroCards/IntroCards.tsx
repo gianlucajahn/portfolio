@@ -36,7 +36,7 @@ export default function IntroCards () {
             <div className="card-top">
                 <h2 className="num place blue">{state.language === "english" ? "1. Platz" : "1st place"}</h2>
             </div>
-            <h4>{state.language === "english" ? `meistgeliketes Projekt auf "The Odin Project"` : `most liked project of "The Odin Project"`}</h4>
+            <h4>{state.language === "english" ? `meistgeliketes Projekt auf "The Odin Project"` : `most liked project thread of "The Odin Project"`}</h4>
         </motion.div>
 
         <motion.div className="small-card"

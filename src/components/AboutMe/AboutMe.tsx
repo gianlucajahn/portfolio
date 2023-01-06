@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import IntroCards from '../IntroCards/IntroCards';
 import './AboutMe.scss';
 import Showcase from '../Showcase/Showcase';
+import EndCards from '../EndCards/EndCards';
 
 export default function AboutMe () {
   const [state, dispatch] = useContext(store);
@@ -24,6 +25,7 @@ export default function AboutMe () {
 
       <IntroCards />
       <Showcase />
+      <EndCards />
     </div>
   );
 }
