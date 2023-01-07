@@ -19,7 +19,7 @@ export default function Showcase() {
           whileInView={{ scale: 1 }}
           viewport={{ once: true }}
         >
-          {state.language === "english" ? "Egal ob aufwendig animierte oder strukturell komplexe Projekte, in meinem Portfolio finden Sie beides - denn ein guter Entwickler sollte beides drauf haben." : "Whether elaborately animated or structurally complex projects, you'll find both in my portfolio - because a good developer should be able to pull both off."}
+          {state.language === "english" ? "Egal ob aufwendig animierte oder strukturell komplexe Projekte, in meinem Portfolio finden Sie beides - denn ein guter Entwickler sollte beides drauf haben." : "Whether elaborately animated or structurally complex projects, you'll find both in my portfolio - because a good developer should be able to pull off both."}
         </motion.p>
       </div>
 
