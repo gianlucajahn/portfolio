@@ -9,6 +9,7 @@ export default function Hero() {
 
   return (
     <div className="container-hero">
+      <div className="anchor" id="hero" />
       <motion.div
         className="container-avatar"
         initial={{ opacity: 0, y: 350 }}

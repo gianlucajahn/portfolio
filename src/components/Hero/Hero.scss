@@ -5,6 +5,12 @@
     height: 100vh;
     padding-top: 14.25em;
     box-sizing: border-box;
+    position: relative;
+
+    #hero {
+        top: 0;
+        position: absolute;
+    }
 
     .container-avatar {
         border-radius: 9999px;

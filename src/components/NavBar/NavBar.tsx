@@ -13,7 +13,7 @@ export default function NavBar() {
       animate={{ opacity: 1, scale: 1 }}
       transition={{ type: "spring", duration: 0.7 }}
     >
-      <img src={require("../../assets/images/icon.jpg")} />
+      <img onClick={(e) => scroll("hero")} src={require("../../assets/images/icon.jpg")} />
       <h3 onClick={(e) => scroll("about-me")} className="first">{state.language === "english" ? "Über mich" : "About Me"}</h3>
       <h3 onClick={(e) => scroll("portfolio")}>Portfolio</h3>
       <h3>Skills</h3>

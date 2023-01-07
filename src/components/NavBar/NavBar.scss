@@ -24,6 +24,11 @@ nav {
         height: 37px;
         width: 37px;
         margin-right: 22px;
+        transition: 0.2s ease-in-out all;
+
+        &:hover {
+            scale: 1.05;
+        }
     }
 
     h3,
