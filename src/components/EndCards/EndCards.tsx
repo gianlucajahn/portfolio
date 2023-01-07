@@ -1,12 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./EndCards.scss";
 import { motion } from "framer-motion";
+import { store } from "../../App";
 
 export default function EndCards() {
+  const [state, dispatch] = useContext(store);
+
   return (
     <div className="container-cards">
       <div className="left-card card">
-        <h3 className="clean">Sauberer Code</h3>
+        <h3 className="clean">{state.language === "english" ? "Sauberer Code" : "Clean Code"}</h3>
         <img
           className="code"
           src={require("../../assets/images/cleancode.PNG")}
@@ -14,7 +17,7 @@ export default function EndCards() {
       </div>
 
       <div className="right-card card">
-        <h3>Performance-Optimierung</h3>
+        <h3>{state.language === "english" ? "Performance-Optimierung" : "Performance Optimization"}</h3>
         <p>via Google Lighthouse</p>
 
         <div className="card-content">

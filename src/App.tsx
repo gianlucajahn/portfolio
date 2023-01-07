@@ -10,6 +10,7 @@ import reducer from "./reducers/reducer";
 import sampleStore from "./utils/samples/sampleStore";
 import Manifest from "./components/Manifest/Manifest";
 import AboutMe from "./components/AboutMe/AboutMe";
+import Projects from "./components/Projects/Projects";
 
 // Create store (redux naming convention)
 export const store = createContext<any>(null);
@@ -37,6 +38,7 @@ function App() {
         <Hero />
         <Manifest />
         <AboutMe />
+        <Projects />
       </div>
     </StoreProvider>
   );
