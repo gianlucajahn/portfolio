@@ -1,0 +1,142 @@
+.resume-container {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    padding-top: 30px;
+    background-color: white;
+    min-height: 100vh;
+    align-items: center;
+    margin-left: 0;
+    align-items: center;
+    position: relative;
+
+    #resume {
+        position: absolute;
+        top: 10px;
+    }
+
+    h3,
+    h1 {
+        margin-left: 0;
+        z-index: 5;
+    }
+
+    h3 {
+        margin-left: 0;
+        margin-bottom: 6px;
+    }
+
+    h1 {
+        margin-left: 0;
+        text-align: center;
+        margin-bottom: 79px;
+        font-size: 92px;
+        font-weight: 700;
+        background: rgb(38,164,239);
+        background: linear-gradient(315deg, rgba(38,164,239,1) 0%, rgba(39,164,239,1) 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .resume-box {
+        border: none;
+        z-index: 8;
+        margin-right: 4px;
+        border-radius: 28px;
+        background: rgb(30,208,252);
+        background: linear-gradient(300deg, rgba(30,208,252,1) 0%, rgba(2,98,224,1) 100%);
+        width: 731px;
+        height: 372px;
+        align-items: center;
+        display: flex;
+
+        .resume-box-left {
+            align-self: flex-end;
+            position: relative;
+
+            img {
+                max-height: 372px;
+                position: absolute;
+                bottom: 0px;
+                -webkit-filter: drop-shadow(0px 0px 2px #222222);
+                filter: drop-shadow(0px 0px 2px #222222);
+            }
+        }
+
+        .resume-box-right {
+            max-width: 290px;
+            margin-left: 51.5%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            p {
+                margin-bottom: 42px;
+                font-family: "Inter", sans-serif;
+                color: white;
+                text-align: center;
+            }
+
+            button {
+                border-radius: 24px;
+                width: 198px;
+                border: none;
+                padding: 15px 22px;
+                box-sizing: border-box;
+                height: 52px !important;
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                padding-left: 22px;
+                gap: 8px;
+                font-family: "Inter", sans-serif;
+                color: white;
+                font-weight: 500;
+                font-size: 17.35px;
+                box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
+
+                .svg {
+                    height: 24px;
+                    width: 24px;
+                }
+            }
+
+            .download {
+                background-color: #0064ff;
+                margin-bottom: 8px;
+
+                &:hover {
+                    .download-svg {
+                        margin-top: 6px;
+                    }
+                }
+
+                .download-svg {
+                    fill: white;
+                    transition: 0.225s ease-in-out all;
+                }
+            }
+
+            .contact {
+                background-color: white;
+                color: #0064ff;
+                transition: 0.3s all;
+
+                &:hover {
+                    background-color: #0064ff;
+                    color: white;
+
+                    .contact-svg {
+                        fill: white;
+                    }
+                }
+
+                .contact-svg {
+                    fill: #0064ff;
+                    transition: 0.3s all;
+                }
+            }
+        }
+    }
+}

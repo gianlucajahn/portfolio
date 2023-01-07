@@ -15,9 +15,9 @@ export default function NavBar() {
     >
       <img src={require("../../assets/images/icon.jpg")} />
       <h3 onClick={(e) => scroll("about-me")} className="first">{state.language === "english" ? "Über mich" : "About Me"}</h3>
-      <h3>Portfolio</h3>
+      <h3 onClick={(e) => scroll("portfolio")}>Portfolio</h3>
       <h3>Skills</h3>
-      <h3>{state.language === "english" ? "Lebenslauf" : "Curriculum"}</h3>
+      <h3 onClick={(e) => scroll("resume")}>{state.language === "english" ? "Lebenslauf" : "Resume"}</h3>
       <button className="btn-nav" type="button">
         {state.language === "english" ? "Kontakt" : "Contact"}
       </button>

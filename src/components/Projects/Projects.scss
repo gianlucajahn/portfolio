@@ -2,8 +2,14 @@
     background-color: white;
     display: flex;
     flex-direction: column;
+    position: relative;
     width: 100vw;
-    padding-bottom: 150px;
+    padding-bottom: 142px;
+
+    #portfolio {
+        position: absolute;
+        top: 0;
+    }
 
     .more {
         color: #006DDB;
@@ -21,7 +27,7 @@
     }
 
     h1 {
-        max-width: 900px;
+        max-width: 860px;
         margin-bottom: 140px;
     }
 
@@ -61,7 +67,7 @@ a {
         display: flex;
         align-items: center;
         justify-content: center;
-        z-index: 400;
+        z-index: 30;
         position: absolute;
         transition: 0.2s all;
     }

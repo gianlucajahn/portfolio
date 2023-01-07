@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import "./Hero.scss";
 import { motion } from "framer-motion";
 import { store } from "../../App";
+import scroll from "../../utils/helpers/scroll";
 
 export default function Hero() {
   const [state, dispatch] = useContext(store);
@@ -67,7 +68,7 @@ export default function Hero() {
           y: { duration: 0.4, type: "spring" },
         }}
       >
-        <h3>{state.language === "english" ? "Mehr erfahren" : "Find out more"}</h3>
+        <h3 onClick={(e) => scroll("about-me")}>{state.language === "english" ? "Mehr erfahren" : "Find out more"}</h3>
         <img src={require("../../assets/images/arrow.png")} />
       </motion.button>
     </div>
