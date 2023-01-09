@@ -12,6 +12,7 @@ import Manifest from "./components/Manifest/Manifest";
 import AboutMe from "./components/AboutMe/AboutMe";
 import Projects from "./components/Projects/Projects";
 import Resume from "./components/Resume/Resume";
+import Skills from "./components/Skills/Skills";
 
 // Create store (redux naming convention)
 export const store = createContext<any>(null);
@@ -40,6 +41,7 @@ function App() {
         <Manifest />
         <AboutMe />
         <Projects />
+        <Skills />
         <Resume />
       </div>
     </StoreProvider>
