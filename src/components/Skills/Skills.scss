@@ -5,6 +5,12 @@
     flex-direction: column;
     padding-top: 40px;
     padding-bottom: 174px;
+    position: relative;
+
+    #skills {
+        position: absolute;
+        top: 75px;
+    }
 
     .skill-grid {
         align-self: center;

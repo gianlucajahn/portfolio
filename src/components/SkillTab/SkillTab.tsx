@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { store } from "../../App";
+import { motion } from "framer-motion";
 import returnTabName from "../../utils/helpers/returnTabName";
 import Image from "../Image/Image";
 import "./SkillTab.scss";
@@ -13,7 +14,13 @@ export default function SkillTab(props: SkillTabProps) {
   const [state, dispatch] = useContext(store);
 
   return (
-    <div className="skill-tab-container">
+    <motion.div
+      className="skill-tab-container"
+      initial={{ scale: 0 }}
+      whileInView={{ scale: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6, type: "spring", bounce: 0.4, delay: topic === "libraries" ? 0.35 : topic === "prototyping" ? 0.35 : topic === "code" ? 0.65 : 0.05 }}
+    >
       <h3 className="head">{returnTabName(topic, state.language)}</h3>
       {topic === "languages" ? (
         <div className="skill-tab-list languages">
@@ -56,11 +63,6 @@ export default function SkillTab(props: SkillTabProps) {
           <Image source="vscode" name="VSCode" />
         </div>
       ) : null}
-      {topic === "learning" ? (
-        <div className="skill-tab-list">
-          <Image source="theodinproject" name="The Odin Project" />
-        </div>
-      ) : null}
-    </div>
+    </motion.div>
   );
 }

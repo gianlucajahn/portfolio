@@ -9,11 +9,31 @@ export default function Projects() {
   return (
     <div className="projects-container">
       <div className="anchor" id="portfolio" />
-      <h3 className="eyebrow">{state.language === "english" ? "Projekte" : "Projects"}</h3>
-      <h1 className="heading">{state.language === "english" ? "Eine kleine Auswahl meiner Projekte." : "A small preview of my projects."}</h1>
+      <motion.h3
+        className="eyebrow"
+        initial={{ y: 300 }}
+        whileInView={{ y: 0 }}
+        viewport={{ once: true }}
+      >
+        {state.language === "english" ? "Projekte" : "Projects"}
+      </motion.h3>
+      <motion.h1
+        className="heading"
+        initial={{ y: 250 }}
+        whileInView={{ y: 0 }}
+        viewport={{ once: true }}
+      >
+        {state.language === "english"
+          ? "Eine kleine Auswahl meiner Projekte."
+          : "A small preview of my projects."}
+      </motion.h1>
 
       <div className="project-list">
-        <a href="https://gianlucajahn.github.io/react-ecommerce-store/" className="ecom" target="_blank">
+        <a
+          href="https://gianlucajahn.github.io/react-ecommerce-store/"
+          className="ecom"
+          target="_blank"
+        >
           <div className="tooltip upper ecom" />
           <motion.img
             whileHover={{ scale: 1.025 }}
@@ -23,7 +43,11 @@ export default function Projects() {
           />
         </a>
 
-        <a href="https://gianlucajahn.github.io/CV-Application/" className="cv" target="_blank">
+        <a
+          href="https://gianlucajahn.github.io/CV-Application/"
+          className="cv"
+          target="_blank"
+        >
           <div className="tooltip upper cv" />
           <motion.img
             whileHover={{ scale: 1.025 }}
@@ -33,7 +57,11 @@ export default function Projects() {
           />
         </a>
 
-        <a href="https://gianlucajahn.github.io/typescript-reddit-clone/" className="reddit lower" target="_blank">
+        <a
+          href="https://gianlucajahn.github.io/typescript-reddit-clone/"
+          className="reddit lower"
+          target="_blank"
+        >
           <div className="tooltip lower reddit" />
           <motion.img
             whileHover={{ scale: 1.025 }}
@@ -43,7 +71,11 @@ export default function Projects() {
           />
         </a>
 
-        <a href="https://gianlucajahn.github.io/macOS-react/" className="mac lower" target="_blank">
+        <a
+          href="https://gianlucajahn.github.io/macOS-react/"
+          className="mac lower"
+          target="_blank"
+        >
           <div className="tooltip lower mac" />
           <motion.img
             whileHover={{ scale: 1.025 }}
@@ -54,7 +86,13 @@ export default function Projects() {
         </a>
       </div>
 
-      <a href="https://github.com/gianlucajahn" target="_blank" className="more">{state.language === "english" ? "Mehr anzeigen" : "Show More"}</a>
+      <a
+        href="https://github.com/gianlucajahn"
+        target="_blank"
+        className="more"
+      >
+        {state.language === "english" ? "Mehr anzeigen" : "Show More"}
+      </a>
     </div>
   );
 }
