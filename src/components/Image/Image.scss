@@ -1,0 +1,23 @@
+.skill-tab-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+
+    img {
+        height: 100px;
+        -webkit-user-drag: none;
+        user-select: none;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+    }
+
+    h3 {
+        font-family: "Inter", sans-serif;
+        color: #1d1d1f;
+        opacity: 0.75;
+        font-size: 14px;
+    }
+}

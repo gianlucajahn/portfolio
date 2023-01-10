@@ -1,4 +1,31 @@
 .skill-tab-container {
     display: flex;
     flex-direction: column;
+    gap: 16px;
+    padding: 28px;
+    background-color: white;
+    border: 1px solid #ebebeb;
+    border-radius: 28px;
+
+    .head {
+        align-self: flex-start;
+        margin-left: 22px;
+    }
+
+    .skill-tab-list {
+        display: flex;
+        margin-top: 16px;
+        gap: 46px;
+        padding: 0 22px;
+        justify-content: space-between;
+    }
+
+    .languages {
+        gap: 60px;
+        padding: 0 26px;
+    }
+
+    .one-item {
+        padding: 0 40px;
+    }
 }

@@ -1,8 +1,8 @@
-const returnTabName = (topic: string) => {
+const returnTabName = (topic: string, language: string) => {
     let returnedTopic = "";
     switch (topic) {
         case "languages":
-            returnedTopic = "Languages";
+            returnedTopic = language === "english" ? "Sprachen" : "Languages";
             break;
         case "frameworks":
             returnedTopic = "Frameworks";
@@ -11,16 +11,16 @@ const returnTabName = (topic: string) => {
             returnedTopic = "Libraries";
             break;
         case "collaborative":
-            returnedTopic = "Collaborative Work";
+            returnedTopic = language === "english" ? "Arbeit in Teams" : "Collaborative Work";
             break;
         case "prototyping":
             returnedTopic = "Prototyping";
             break;
         case "code":
-            returnedTopic = "Code Editor";
+            returnedTopic = "Code Editors";
             break;
         case "learning":
-            returnedTopic = "Learning Resources";
+            returnedTopic = language === "english" ? "Lernressourcen" : "Learning Resources";
             break;
         default: 
             returnedTopic = "";

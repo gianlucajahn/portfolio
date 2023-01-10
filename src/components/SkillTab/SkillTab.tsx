@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useContext } from "react";
+import { store } from "../../App";
 import returnTabName from "../../utils/helpers/returnTabName";
+import Image from "../Image/Image";
 import "./SkillTab.scss";
 
 export interface SkillTabProps {
@@ -8,17 +10,57 @@ export interface SkillTabProps {
 
 export default function SkillTab(props: SkillTabProps) {
   const { topic } = props;
+  const [state, dispatch] = useContext(store);
 
   return (
     <div className="skill-tab-container">
-      <h3>{returnTabName(topic)}</h3>
-      {topic === "languages" ? <div></div> : null}
-      {topic === "frameworks" ? <div></div> : null}
-      {topic === "libraries" ? <div></div> : null}
-      {topic === "collaborative" ? <div></div> : null}
-      {topic === "prototyping" ? <div></div> : null}
-      {topic === "code" ? <div></div> : null}
-      {topic === "learning" ? <div></div> : null}
+      <h3 className="head">{returnTabName(topic, state.language)}</h3>
+      {topic === "languages" ? (
+        <div className="skill-tab-list languages">
+          <Image source="typescript" name="TypeScript" />
+          <Image source="javascript" name="JavaScript" />
+          <Image source="sass" name="SASS/SCSS" />
+          <Image source="css" name="CSS" />
+          <Image source="html" name="HTML" />
+          <Image source="python" name="Python" />
+        </div>
+      ) : null}
+      {topic === "frameworks" ? (
+        <div className="skill-tab-list">
+          <Image source="react" name="React" />
+          <Image source="next" name="Next.js" />
+          <Image source="tailwind" name="TailwindCSS" />
+        </div>
+      ) : null}
+      {topic === "libraries" ? (
+        <div className="skill-tab-list">
+          <Image source="redux" name="Redux" />
+          <Image source="framermotion" name="Framer Motion" />
+          <Image source="chakraui" name="Chakra UI" />
+        </div>
+      ) : null}
+      {topic === "collaborative" ? (
+        <div className="skill-tab-list">
+          <Image source="git" name="Git" />
+          <Image source="github" name="GitHub" />
+        </div>
+      ) : null}
+      {topic === "prototyping" ? (
+        <div className="skill-tab-list">
+          <Image source="figma" name="Figma" />
+          <Image source="photoshop" name="Adobe Photoshop" />
+        </div>
+      ) : null}
+      {topic === "code" ? (
+        <div className="skill-tab-list one-item">
+          <Image source="vscode" name="VSCode" />
+        </div>
+      ) : null}
+      {topic === "learning" ? (
+        <div className="skill-tab-list">
+          <Image source="theodinproject" name="The Odin Project" />
+        </div>
+      ) : null}
     </div>
   );
 }
