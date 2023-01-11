@@ -60,7 +60,7 @@ export default function Contact() {
           initial={{ x: -250, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           viewport={{ once: true }}
-          transition={{ opacity: { duration: 0.3, delay: 0.35 }, x: { duration: 0.8, type: "spring", delay: 0.35 } }}
+          transition={{ opacity: { duration: 0.3, delay: 0.3 }, x: { duration: 0.8, type: "spring", delay: 0.25 } }}
         >
           <ContactForm />
         </motion.div>
@@ -70,7 +70,7 @@ export default function Contact() {
           initial={{ x: 250, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           viewport={{ once: true }}
-          transition={{ opacity: { duration: 0.3, delay: 0.35 }, x: { duration: 0.8, type: "spring", delay: 0.35 } }}
+          transition={{ opacity: { duration: 0.3, delay: 0.3 }, x: { duration: 0.8, type: "spring", delay: 0.25 } }}
         >
           <a target="_blank" href="https://www.linkedin.com/in/gianlucajahn/">
             <button className="contact-socials-item linkedin">
