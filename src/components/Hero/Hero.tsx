@@ -8,7 +8,7 @@ export default function Hero() {
   const [state, dispatch] = useContext(store);
 
   return (
-    <div className="container-hero">
+    <div className={`container-hero ${state.darkmode ? "dark-bg-1" : "light-bg-1"}`}>
       <div className="anchor" id="hero" />
       <motion.div
         className="container-avatar"
@@ -23,7 +23,7 @@ export default function Hero() {
       </motion.div>
 
       <motion.h2
-        className="name"
+        className={`${state.darkmode ? "white-opacity" : "light-eyebrow"}`}
         initial={{ opacity: 0, y: 140 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{
@@ -36,7 +36,7 @@ export default function Hero() {
       </motion.h2>
 
       <motion.h1
-        className="title"
+        className={`${state.darkmode ? "dark-heading" : "light-heading"}`}
         initial={{ opacity: 0, y: 400 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{
@@ -49,6 +49,7 @@ export default function Hero() {
       </motion.h1>
 
       <motion.h4
+        className={`${state.darkmode ? "white-opacity-max" : "light-phrase"}`}
         initial={{ opacity: 0, y: 140 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{
