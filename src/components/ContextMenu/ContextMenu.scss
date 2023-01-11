@@ -11,6 +11,11 @@
     gap: 7px;
     visibility: hidden;
 
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
     .context-menu-item {
         display: flex;
         align-items: center;

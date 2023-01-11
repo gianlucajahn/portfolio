@@ -16,6 +16,7 @@ import Skills from "./components/Skills/Skills";
 import ContextMenu from "./components/ContextMenu/ContextMenu";
 import toggleContextMenu from "./utils/helpers/toggleContextMenu";
 import hideContextMenu from "./utils/helpers/hideContextMenu";
+import toast, { Toaster } from "react-hot-toast";
 
 // Create store (redux naming convention)
 export const store = createContext<any>(null);
@@ -39,6 +40,7 @@ function App() {
         onMouseUp={(e) => setCursorAppearance(e)}
         onContextMenu={(e) => toggleContextMenu(e)}
       >
+        <Toaster />
         <Cursor />
         <NavBar />
         <LanguageSwitch />
