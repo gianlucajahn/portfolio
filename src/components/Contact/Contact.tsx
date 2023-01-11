@@ -30,6 +30,7 @@ export default function Contact() {
 
   return (
     <div className="contact-container">
+      <div className="anchor" id="contact" />
       <motion.h3
         className="eyebrow"
         initial={{ y: 200 }}

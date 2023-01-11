@@ -18,7 +18,7 @@ export default function NavBar() {
       <h3 onClick={(e) => scroll("portfolio")}>Portfolio</h3>
       <h3 onClick={(e) => scroll("skills")}>Skills</h3>
       <h3 onClick={(e) => scroll("resume")}>{state.language === "english" ? "Lebenslauf" : "Resume"}</h3>
-      <button className="btn-nav" type="button">
+      <button className="btn-nav" type="button" onClick={(e) => scroll("contact")}>
         {state.language === "english" ? "Kontakt" : "Contact"}
       </button>
     </motion.nav>

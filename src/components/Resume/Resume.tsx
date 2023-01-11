@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { store } from '../../App';
 import { ReactComponent as Download } from "../../assets/images/download.svg";
 import { ReactComponent as Contact } from "../../assets/images/contact.svg";
+import scroll from '../../utils/helpers/scroll';
 
 export default function Resume () {
   const [state, dispatch] = useContext(store);
@@ -36,7 +37,7 @@ export default function Resume () {
                     Download CV
                 </button></a>
 
-                <button className="contact">
+                <button className="contact" onClick={(e) => scroll("contact")}>
                     <Contact className="contact-svg svg" style={{ height: "20px" }} />
                     {state.language === "english" ? "Kontakt-Daten" : "Contact me"}
                 </button>

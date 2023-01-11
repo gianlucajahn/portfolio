@@ -5,6 +5,12 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+    position: relative;
+
+    #contact {
+        position: absolute;
+        top: 26px;
+    }
 
     h1 {
         max-width: 570px;
