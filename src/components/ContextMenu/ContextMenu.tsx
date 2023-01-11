@@ -50,32 +50,32 @@ export default function ContextMenu() {
       <a target="_blank" href="https://github.com/gianlucajahn/portfolio">
         <div className="context-menu-item">
           <SourceCode className="context-icon" />
-          <h3>Source Code</h3>
+          <h3>{state.language === "english" ? "Quelltext" : "Source Code"}</h3>
         </div>
       </a>
 
       <a target="_blank" href="https://github.com/gianlucajahn">
         <div className="context-menu-item">
           <GitHub className="context-icon" />
-          <h3>GitHub Profile</h3>
+          <h3>{state.language === "english" ? "GitHub Profil" : "GitHub Profile"}</h3>
         </div>
       </a>
 
       <a target="_blank" href="https://www.linkedin.com/in/gianlucajahn/">
         <div className="context-menu-item">
           <LinkedIn className="context-icon linkedin" />
-          <h3>LinkedIn Profile</h3>
+          <h3>{state.language === "english" ? "LinkedIn Profil" : "LinkedIn Profile"}</h3>
         </div>
       </a>
 
       <div className="context-menu-item" onClick={copyEmail}>
         <Mail className="context-icon mail" />
-        <h3>Copy E-Mail</h3>
+        <h3>{state.language === "english" ? "E-Mail kopieren" : "Copy E-Mail"}</h3>
       </div>
 
       <div className="context-menu-item" onClick={copyURL}>
         <Share className="context-icon share" />
-        <h3>Share</h3>
+        <h3>{state.language === "english" ? "Teilen" : "Share"}</h3>
       </div>
     </div>
   );

@@ -14,8 +14,26 @@ export default function Contact () {
         <div className="contact-data">
             <ContactForm />
 
-            <section className="contact-socials">
+            <section className="contact-socials-container">
+                <button className="contact-socials-item">
+                    LinkedIn
+                </button>
 
+                <button className="contact-socials-item">
+                    GitHub
+                </button>
+
+                <button className="contact-socials-item">
+                    Twitter
+                </button>
+
+                <button className="contact-socials-item">
+                    WhatsApp
+                </button>
+
+                <button className="contact-socials-email">
+                    E-Mail-Adresse kopieren
+                </button>
             </section>
         </div>
     </div>
