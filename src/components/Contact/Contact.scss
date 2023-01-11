@@ -1,7 +1,7 @@
 .contact-container {
     background-color: #f5f5f7;
     width: 100vw;
-    padding-bottom: 48px;
+    padding-bottom: 50px;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -45,6 +45,11 @@
             padding: 22px 24px;
             box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.2);
             gap: 10px;
+
+            a {
+                text-decoration: underline;
+                color: transparent;
+            }
 
             button {
                 border: none;
