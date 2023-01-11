@@ -15,6 +15,7 @@ import Resume from "./components/Resume/Resume";
 import Skills from "./components/Skills/Skills";
 import ContextMenu from "./components/ContextMenu/ContextMenu";
 import toggleContextMenu from "./utils/helpers/toggleContextMenu";
+import hideContextMenu from "./utils/helpers/hideContextMenu";
 
 // Create store (redux naming convention)
 export const store = createContext<any>(null);
@@ -31,6 +32,7 @@ function App() {
     <StoreProvider>
       <div
         className="App"
+        onClick={hideContextMenu}
         onMouseMove={(e) => setCursorLocation(e)}
         onScroll={(e) => setCursorLocation(e)}
         onMouseDown={(e) => setCursorAppearance(e)}

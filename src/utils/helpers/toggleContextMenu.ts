@@ -1,9 +1,6 @@
 const toggleContextMenu = (e: any) => {
     e.preventDefault();
     const contextMenu = document.getElementById('context-menu');
-    // disable entry animation on contextMenu before it appears
-    contextMenu!.style.transition = "none";
-    contextMenu!.style.opacity = "1";
 
     let x = e.pageX, y = e.pageY;
     let winWidth = window.innerWidth;
@@ -14,7 +11,6 @@ const toggleContextMenu = (e: any) => {
     // if x is greater than "windows width - contextMenu width", set the x value 
     // to "window width - contextMenu width". Else, set x to the offsetX. Similarly with y.
     x = x > winWidth - cmWidth ? winWidth - cmWidth : x;
-    y = y > winHeight - cmHeight ? winHeight - cmHeight : y;
 
     contextMenu!.style.left = `${x}px`;
     contextMenu!.style.top = `${y}px`;
