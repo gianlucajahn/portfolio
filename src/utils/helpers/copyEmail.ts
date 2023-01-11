@@ -7,7 +7,11 @@ const copyEmail = () => {
         position: "top-left",
         style: {
             border: "1px solid #ebebeb",
-            boxShadow: "0px 3px 6px rgba(0, 0, 0, 0.225)"
+            boxShadow: "0px 3px 6px rgba(0, 0, 0, 0.225)",
+            borderRadius: "28px",
+            fontFamily: "Inter",
+            color: "#1d1d1f",
+            fontSize: "14px"
         }
       });
 }
