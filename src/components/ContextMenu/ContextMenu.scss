@@ -1,0 +1,66 @@
+.context-menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 50;
+    padding: 10px 12px;
+    border: none;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6px);
+    gap: 7px;
+    visibility: hidden;
+
+    .context-menu-item {
+        display: flex;
+        align-items: center;
+        gap: 11px;
+        padding: 8px 16px 9px 16px;
+        background-color: white;
+        border-radius: 12px;
+        transition: 0.2s all;
+
+        &:active {
+            scale: 0.975
+        }
+
+        &:hover {
+            background-color: #0064ff;
+            scale: 1.07;
+
+            .context-icon {
+                fill: white;
+            }
+
+            h3 {
+                color: white;
+            }
+        }
+
+        .context-icon {
+            width: 20px;
+            fill: black;
+            transition: 0.2s all;
+        }
+
+        .linkedin {
+            height: 17px;
+            margin-bottom: 1px;
+        }
+
+        .share {
+            height: 21px;
+        }
+
+        .mail {
+            height: 15px;
+        }
+
+        h3 {
+            font-family: "Inter", sans-serif;
+            letter-spacing: -0.025em;
+            font-size: 16px;
+            transition: 0.2s all;
+        }
+    }
+}

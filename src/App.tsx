@@ -13,6 +13,8 @@ import AboutMe from "./components/AboutMe/AboutMe";
 import Projects from "./components/Projects/Projects";
 import Resume from "./components/Resume/Resume";
 import Skills from "./components/Skills/Skills";
+import ContextMenu from "./components/ContextMenu/ContextMenu";
+import toggleContextMenu from "./utils/helpers/toggleContextMenu";
 
 // Create store (redux naming convention)
 export const store = createContext<any>(null);
@@ -33,10 +35,12 @@ function App() {
         onScroll={(e) => setCursorLocation(e)}
         onMouseDown={(e) => setCursorAppearance(e)}
         onMouseUp={(e) => setCursorAppearance(e)}
+        onContextMenu={(e) => toggleContextMenu(e)}
       >
         <Cursor />
         <NavBar />
         <LanguageSwitch />
+        <ContextMenu />
         <Hero />
         <Manifest />
         <AboutMe />
