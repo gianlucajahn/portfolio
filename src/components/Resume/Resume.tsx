@@ -31,10 +31,10 @@ export default function Resume () {
 
             <div className="resume-box-right">
                 <p>{state.language === "english" ? "Sollten Sie Interesse haben, kontaktieren Sie mich gern jederzeit. Hier können Sie außerdem meinen Lebenslauf herunterladen." : "Should you still have any questions, feel free to contact me. Additionally, you can download my resume below."}</p>
-                <button className="download">
+                <a download="cv_gianlucajahn.pdf" href={require("../../assets/documents/cv_gianlucajahn_german.pdf")}><button className="download">
                     <Download className="download-svg svg" style={{ height: "22px" }} />
                     Download CV
-                </button>
+                </button></a>
 
                 <button className="contact">
                     <Contact className="contact-svg svg" style={{ height: "20px" }} />

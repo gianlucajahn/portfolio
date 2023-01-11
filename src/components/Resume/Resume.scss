@@ -71,6 +71,11 @@
             flex-direction: column;
             align-items: center;
 
+            a {
+                text-decoration: none;
+                color: transparent;
+            }
+
             p {
                 margin-bottom: 42px;
                 font-family: "Inter", sans-serif;
