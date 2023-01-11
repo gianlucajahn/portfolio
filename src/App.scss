@@ -46,6 +46,19 @@ div {
   color: #333333bf;
 }
 
+.light-nav {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.light-anchor {
+  color: #333333;
+
+  &:hover {
+    color: #0064FF;
+    font-size: 18px;
+  }
+}
+
 // dark mode
 
 .dark-bg-1 {
@@ -74,4 +87,17 @@ div {
 
 .white-opacity-max {
   color: rgb(177, 177, 177);
+}
+
+.dark-nav {
+  background-color: rgba(255, 255, 255, 0.151);
+}
+
+.dark-anchor {
+  color: white;
+
+  &:hover {
+    color: #30a2ff;
+    font-size: 18px;
+  }
 }

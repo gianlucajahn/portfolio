@@ -7,7 +7,7 @@ export default function Manifest () {
   const [state, dispatch] = useContext(store);
 
   return (
-    <div className="container-manifest">
+    <div className={`container-manifest ${state.darkmode ? "dark-bg-1" : "light-bg-1"}`}>
         <motion.a className="manifest"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
