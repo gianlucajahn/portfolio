@@ -213,3 +213,32 @@ div {
   color: white;
   transition: 0.2s background-color, 0.2s color, 0.2s border;
 }
+
+// media queries
+
+@media only screen and (max-width: 598px) {
+  .light-anchor,
+  .dark-anchor {
+    &:hover {
+      font-size: 15px;
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .light-anchor,
+  .dark-anchor {
+    &:hover {
+      font-size: 11px;
+    }
+  }
+}
+
+@media only screen and (max-width: 386px) {
+  .light-anchor,
+  .dark-anchor {
+    &:hover {
+      font-size: 9px;
+    }
+  }
+}

@@ -16,6 +16,15 @@ nav {
     backdrop-filter: blur(10px);
     box-sizing: border-box;
 
+    @media screen and (max-width: 500px) {
+        height: 40px;
+    }
+
+    @media screen and (max-width: 386px) {
+        height: 34px;
+        padding: 4px 5px;
+    }
+
     img {
         border-radius: 9999px;
         border: none;
@@ -27,6 +36,18 @@ nav {
 
         &:hover {
             scale: 1.05;
+        }
+
+        @media screen and (max-width: 500px) {
+            height: 24px;
+            width: 24px;
+            margin-right: 14px;
+        }
+
+        @media screen and (max-width: 386px) {
+            height: 20px;
+            width: 20px;
+            margin-right: 10px;
         }
     }
 
@@ -40,6 +61,18 @@ nav {
         align-items: center;
         width: 89px;
         transition: 0.15s all ease-in-out;
+
+        @media screen and (max-width: 598px) {
+            width: 68px;
+        }
+
+        @media screen and (max-width: 500px) {
+            width: 54px;
+        }
+
+        @media screen and (max-width: 386px) {
+            width: 40px;
+        }
     }
 
     .first {
@@ -49,6 +82,24 @@ nav {
     h3 {
         font-size: 16px;
         padding: 11px 0px 10px 0px;
+
+        @media screen and (max-width: 598px) {
+            font-size: 14px;
+        }
+
+        @media screen and (max-width: 500px) {
+            font-size: 11px;
+        }
+
+        @media screen and (max-width: 386px) {
+            font-size: 9px;
+        }
+    }
+
+    .first {
+        @media screen and (max-width: 386px) {
+            width: 44px;
+        }
     }
 
     button {
@@ -59,6 +110,25 @@ nav {
         border: none;
         border-radius: 20px;
         padding: 7px 18px;
+
+        @media screen and (max-width: 598px) {
+            font-size: 14px;
+            width: 76px;
+        }
+
+        @media screen and (max-width: 500px) {
+            font-size: 11px;
+            width: 58px;
+            margin-left: 14px;
+            padding: 4px 0px;
+        }
+
+        @media screen and (max-width: 386px) {
+            font-size: 9px;
+            width: 50px;
+            margin-left: 10px;
+            margin-top: 1px;
+        }
 
         &:hover {
             background-color: #0041a3;
