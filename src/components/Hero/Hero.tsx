@@ -62,6 +62,7 @@ export default function Hero() {
       </motion.h4>
 
       <motion.button
+        onClick={(e) => scroll("about-me")}
         initial={{ opacity: 0, y: 140 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{
@@ -70,7 +71,7 @@ export default function Hero() {
           y: { duration: 0.4, type: "spring" },
         }}
       >
-        <h3 onClick={(e) => scroll("about-me")}>{state.language === "english" ? "Mehr erfahren" : "Find out more"}</h3>
+        <h3>{state.language === "english" ? "Mehr erfahren" : "Find out more"}</h3>
         <img src={require("../../assets/images/arrow.png")} />
       </motion.button>
     </div>
