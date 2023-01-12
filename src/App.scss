@@ -34,8 +34,7 @@ div {
 }
 
 .light-eyebrow {
-  color: #1d1d1f;
-  opacity: 0.75;
+  color: #535355;
 }
 
 .light-heading {
@@ -59,7 +58,42 @@ div {
   }
 }
 
+.light-card {
+  border: 1px solid #ebebeb;
+  background-color: white;
+}
+
+.light-field {
+  background-color: #f5f5f7;
+  border: 2px solid #ebebeb;
+  color: #5f5f5f;
+}
+
+.light-shadow {
+  box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.2);
+}
+
+.light-language-button {
+  box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  color: #1d1d1f;
+  border: none;
+}
+
+.light-context-menu {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
 // dark mode
+
+.dark-context-menu {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.dark-card {
+  border: 1px solid hsla(0,0%,51.4%,.16);
+  background-color: #1d1d1f;
+}
 
 .dark-bg-1 {
   background-color: #1d1d1f !important;
@@ -74,7 +108,7 @@ div {
 }
 
 .dark-eyebrow {
-  color: #f5f5f7;
+  color: #f5f5f7c4;
 }
 
 .white {
@@ -100,4 +134,24 @@ div {
     color: #30a2ff;
     font-size: 18px;
   }
+}
+
+.dark-expand {
+  color: #30a2ff;
+}
+
+.dark-field {
+  background-color: rgba(0, 0, 0, 0.35);
+  border: 2px solid hsla(0,0%,51.4%,.16);
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.dark-shadow {
+  box-shadow: 0px 3px 14px rgba(255, 255, 255, 0.2) !important;
+}
+
+.dark-language-button {
+  border: 2px solid hsla(0,0%,51.4%,.16);
+  background-color: #141414;
+  color: white;
 }

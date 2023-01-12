@@ -18,21 +18,22 @@ export default function Contact() {
       icon: "📧",
       position: "top-left",
       style: {
-        border: "1px solid #ebebeb",
+        border: state.darkmode ? "2px solid hsla(0,0%,51.4%,.16)" : "1px solid #ebebeb",
         boxShadow: "0px 3px 6px rgba(0, 0, 0, 0.225)",
-        borderRadius: "28px",
+        borderRadius: "14px",
         fontFamily: "Inter",
-        color: "#1d1d1f",
+        color: state.darkmode ? "white" : "#1d1d1f",
         fontSize: "14px",
+        backgroundColor: state.darkmode ? "#141414" : ""
       },
     });
   };
 
   return (
-    <div className="contact-container">
+    <div className={`contact-container ${state.darkmode ? "dark-bg-2" : "light-bg-2"}`}>
       <div className="anchor" id="contact" />
       <motion.h3
-        className="eyebrow"
+        className={`eyebrow ${state.darkmode ? "dark-eyebrow" : "light-eyebrow"}`}
         initial={{ y: 200 }}
         whileInView={{ y: 0 }}
         viewport={{ once: true }}
@@ -40,7 +41,7 @@ export default function Contact() {
         {state.language === "english" ? "Kontakt" : "Contact"}
       </motion.h3>
       <motion.h1
-        className="heading"
+        className={`heading ${state.darkmode ? "dark-heading" : "light-heading"}`}
         initial={{ y: 150 }}
         whileInView={{ y: 0 }}
         viewport={{ once: true }}
@@ -50,7 +51,7 @@ export default function Contact() {
           : "My contact information."}
       </motion.h1>
 
-      <p>
+      <p className={`${state.darkmode ? "dark-eyebrow" : "light-phrase"}`}>
         {state.language === "english"
           ? "Füllen Sie das Formular auf der linken Seite mit Ihren Informationen aus und ich werde mich so schnell wie möglich bei Ihnen melden. Alternativ können Sie mich auch auf den rechts aufgeführten Plattformen finden."
           : "Fill in the form on the left with your information and I will get back to you as soon as possible. Alternatively, you can find me on the platforms listed on the right."}
@@ -67,36 +68,36 @@ export default function Contact() {
         </motion.div>
 
         <motion.section
-          className="contact-socials-container"
+          className={`contact-socials-container ${state.darkmode ? "dark-card" : "light-card"} ${state.darkmode ? "dark-shadow" : "light-shadow"}`}
           initial={{ x: 250, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           viewport={{ once: true }}
           transition={{ opacity: { duration: 0.3, delay: 0.3 }, x: { duration: 0.8, type: "spring", delay: 0.25 } }}
         >
           <a target="_blank" href="https://www.linkedin.com/in/gianlucajahn/">
-            <button className="contact-socials-item linkedin">
-              <LinkedIn className="svg" />
+            <button className={`contact-socials-item linkedin ${state.darkmode ? "dark-field" : ""}`}>
+              <LinkedIn className={`svg ${state.darkmode ? "dark-svg" : "light-svg"}`} />
               LinkedIn
             </button>
           </a>
 
           <a target="_blank" href="https://github.com/gianlucajahn">
-            <button className="contact-socials-item github">
-              <GitHub className="svg" />
+            <button className={`contact-socials-item github ${state.darkmode ? "dark-field" : ""}`}>
+              <GitHub className={`svg ${state.darkmode ? "dark-svg" : "light-svg"}`} />
               GitHub
             </button>
           </a>
 
           <a target="_blank" href="https://twitter.com/GianlucaJahn">
-            <button className="contact-socials-item twitter">
-              <Twitter className="svg" />
+            <button className={`contact-socials-item twitter ${state.darkmode ? "dark-field" : ""}`}>
+              <Twitter className={`svg ${state.darkmode ? "dark-svg" : "light-svg"}`} />
               Twitter
             </button>
           </a>
 
           <a target="_blank" href="https://wa.me/+4915233760445">
-            <button className="contact-socials-item whatsapp">
-              <WhatsApp className="svg" />
+            <button className={`contact-socials-item whatsapp ${state.darkmode ? "dark-field" : ""}`}>
+              <WhatsApp className={`svg ${state.darkmode ? "dark-svg" : "light-svg"}`} />
               WhatsApp
             </button>
           </a>

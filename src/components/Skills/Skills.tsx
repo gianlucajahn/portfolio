@@ -7,10 +7,10 @@ export default function Skills() {
   const [state, dispatch] = useContext(store);
 
   return (
-    <div className="skills-container">
+    <div className={`skills-container ${state.darkmode ? "dark-bg-2" : "light-bg-2"}`}>
       <div className="anchor" id="skills" />
-      <h3 className="eyebrow">Skills</h3>
-      <h1 className="heading">
+      <h3 className={`eyebrow ${state.darkmode ? "dark-eyebrow" : "light-eyebrow"}`}>Skills</h3>
+      <h1 className={`heading ${state.darkmode ? "dark-heading" : "light-heading"}`}>
         {state.language === "english"
           ? "Technologien, mit denen ich arbeite."
           : "Everything I use to turn an idea into reality."}

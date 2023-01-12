@@ -1,5 +1,4 @@
 .contact-container {
-    background-color: #f5f5f7;
     width: 100vw;
     padding-bottom: 50px;
     display: flex;
@@ -30,7 +29,6 @@
     p {
         text-align: center;
         margin-top: 45px;
-        color: #333333bf;
         font-size: 16px;
         max-width: 720px;
         font-family: "Inter", sans-serif;
@@ -45,9 +43,7 @@
         .contact-socials-container {
             display: flex;
             flex-direction: column;
-            border: 1px solid #ebebeb;
             border-radius: 20px;
-            background-color: white;
             padding: 22px 24px;
             box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.2);
             gap: 10px;
@@ -63,7 +59,6 @@
                 display: flex;
                 font-family: "Inter", sans-serif;
                 font-weight: 600;
-                color: #5f5f5f;
                 font-size: 15px;
                 align-items: center;
                 gap: 16px;
@@ -75,7 +70,14 @@
                 .svg {
                     width: 22px;
                     height: 21px;
+                }
+
+                .light-svg {
                     fill: #383838;
+                }
+
+                .dark-svg {
+                    fill: #727272;
                 }
 
                 &:active {
@@ -124,7 +126,7 @@
             }
 
             .email {
-                margin-top: 54px;
+                margin-top: 46px;
                 background-color: #0064ff;
                 color: white;
                 display: flex;

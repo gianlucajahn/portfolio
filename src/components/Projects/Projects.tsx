@@ -7,10 +7,10 @@ export default function Projects() {
   const [state, dispatch] = useContext(store);
 
   return (
-    <div className="projects-container">
+    <div className={`projects-container ${state.darkmode ? "dark-bg-1" : "light-bg-1"}`}>
       <div className="anchor" id="portfolio" />
       <motion.h3
-        className="eyebrow"
+        className={`eyebrow ${state.darkmode ? "dark-eyebrow" : "light-eyebrow"}`}
         initial={{ y: 300 }}
         whileInView={{ y: 0 }}
         viewport={{ once: true }}
@@ -18,7 +18,7 @@ export default function Projects() {
         {state.language === "english" ? "Projekte" : "Projects"}
       </motion.h3>
       <motion.h1
-        className="heading"
+        className={`heading ${state.darkmode ? "dark-heading" : "light-heading"}`}
         initial={{ y: 250 }}
         whileInView={{ y: 0 }}
         viewport={{ once: true }}

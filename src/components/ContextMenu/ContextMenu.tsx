@@ -5,9 +5,7 @@ import { ReactComponent as Mail } from "../../assets/images/mail.svg";
 import { ReactComponent as GitHub } from "../../assets/images/github.svg";
 import { ReactComponent as LinkedIn } from "../../assets/images/linkedin.svg";
 import { ReactComponent as Share } from "../../assets/images/share.svg";
-import copyEmail from "../../utils/helpers/copyEmail";
 import toast, { Toaster } from "react-hot-toast";
-import copyURL from "../../utils/helpers/copyURL";
 import { store } from "../../App";
 
 export default function ContextMenu() {
@@ -19,12 +17,13 @@ export default function ContextMenu() {
       icon: "📧",
       position: "top-left",
       style: {
-        border: "1px solid #ebebeb",
+        border: state.darkmode ? "2px solid hsla(0,0%,51.4%,.16)" : "1px solid #ebebeb",
         boxShadow: "0px 3px 6px rgba(0, 0, 0, 0.225)",
-        borderRadius: "28px",
+        borderRadius: "14px",
         fontFamily: "Inter",
-        color: "#1d1d1f",
+        color: state.darkmode ? "white" : "#1d1d1f",
         fontSize: "14px",
+        backgroundColor: state.darkmode ? "#141414" : ""
       },
     });
   };
@@ -35,18 +34,19 @@ export default function ContextMenu() {
       icon: "🌐",
       position: "top-left",
       style: {
-        border: "1px solid #ebebeb",
+        border: state.darkmode ? "2px solid hsla(0,0%,51.4%,.16)" : "1px solid #ebebeb",
         boxShadow: "0px 3px 6px rgba(0, 0, 0, 0.225)",
-        borderRadius: "28px",
+        borderRadius: "14px",
         fontFamily: "Inter",
-        color: "#1d1d1f",
+        color: state.darkmode ? "white" : "#1d1d1f",
         fontSize: "14px",
+        backgroundColor: state.darkmode ? "#141414" : ""
       },
     });
   };
 
   return (
-    <div className="context-menu" id="context-menu">
+    <div className={`context-menu ${state.darkmode ? "dark-context-menu" : "light-context-menu"}`} id="context-menu">
       <a target="_blank" href="https://github.com/gianlucajahn/portfolio">
         <div className="context-menu-item">
           <SourceCode className="context-icon" />

@@ -39,7 +39,7 @@ export default function LanguageSwitch() {
 
   return (
     <motion.button
-      className="btn-language"
+      className={`btn-language ${state.darkmode ? "dark-language-button" : "light-language-button"}`}
       initial={{ y: 150 }}
       animate={{ y: 0 }}
       transition={{ type: "tween", duration: 0.3 }}

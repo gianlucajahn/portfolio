@@ -8,29 +8,29 @@ export default function EndCards() {
 
   return (
     <div className="container-cards">
-      <div className="left-card card">
-        <h3 className="clean">{state.language === "english" ? "Sauberer Code" : "Clean Code"}</h3>
+      <div className={`left-card card ${state.darkmode ? "dark-card" : "light-card"}`}>
+        <h3 className={`clean ${state.darkmode ? "dark-heading" : "light-heading"}`}>{state.language === "english" ? "Sauberer Code" : "Clean Code"}</h3>
         <img
           className="code"
-          src={require("../../assets/images/cleancode.PNG")}
+          src={state.darkmode ? require("../../assets/images/cleancode_2.PNG") : require("../../assets/images/cleancode.PNG")}
         />
       </div>
 
-      <div className="right-card card">
-        <h3>{state.language === "english" ? "Performance-Optimierung" : "Performance Optimization"}</h3>
-        <p>via Google Lighthouse</p>
+      <div className={`right-card card ${state.darkmode ? "dark-card" : "light-card"}`}>
+        <h3 className={`${state.darkmode ? "dark-heading" : "light-heading"}`}>{state.language === "english" ? "Performance-Optimierung" : "Performance Optimization"}</h3>
+        <p className={`clean ${state.darkmode ? "dark-eyebrow" : "light-eyebrow"}`}>via Google Lighthouse</p>
 
         <div className="card-content">
           <motion.img
             className="performance-node perf"
-            src={require("../../assets/images/performance.PNG")}
+            src={state.darkmode ? require("../../assets/images/performance_2.PNG") : require("../../assets/images/performance.PNG")}
             initial={{ scale: 0 }}
             whileInView={{ scale: 1 }}
             viewport={{ once: true }}
           />
           <motion.img
             className="performance-node acc"
-            src={require("../../assets/images/accessibility.png")}
+            src={state.darkmode ? require("../../assets/images/accessibility_2.png") : require("../../assets/images/accessibility.png")}
             initial={{ scale: 0 }}
             whileInView={{ scale: 1 }}
             viewport={{ once: true }}
@@ -38,7 +38,7 @@ export default function EndCards() {
           />
           <motion.img
             className="performance-node best"
-            src={require("../../assets/images/bestpractices.png")}
+            src={state.darkmode ? require("../../assets/images/bestpractices_2.png") : require("../../assets/images/bestpractices.png")}
             initial={{ scale: 0 }}
             whileInView={{ scale: 1 }}
             viewport={{ once: true }}
@@ -46,7 +46,7 @@ export default function EndCards() {
           />
           <motion.img
             className="performance-node seo"
-            src={require("../../assets/images/seo.png")}
+            src={state.darkmode ? require("../../assets/images/seo_2.png") : require("../../assets/images/seo.png")}
             initial={{ scale: 0 }}
             whileInView={{ scale: 1 }}
             viewport={{ once: true }}
