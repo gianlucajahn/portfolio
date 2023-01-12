@@ -17,6 +17,10 @@
     justify-content: center;
     height: 60vh;
 
+    @media screen and (max-width: 450px) {
+      height: 30vh;
+    }
+
     .manifest {
         background: linear-gradient(300deg,#ffee07,#eb5700,#ff2b6a,#ab4bff,#5ca2ff,#df1700);
         background-size: 360% 360%;
@@ -26,6 +30,14 @@
         -webkit-text-fill-color: transparent;
         margin-bottom: 90px;
 
+        @media screen and (max-width: 598px) {
+          margin-bottom: 0px;
+        }
+
+        @media screen and (max-width: 450px) {
+          margin-bottom: 90px;
+        }
+
         h1 {
             font-family: "Inter", sans-serif;
             font-size: 83px;
@@ -33,6 +45,56 @@
             letter-spacing: -0.04em;
             max-width: 1200px;
             text-align: center;
+
+            @media screen and (max-width: 1210px) {
+              font-size: 72px;
+              max-width: 1100px;
+            }
+
+            @media screen and (max-width: 1040px) {
+              font-size: 62px;
+              max-width: 950px;
+            }
+
+            @media screen and (max-width: 880px) {
+              font-size: 52px;
+              max-width: 700px;
+            }
+
+            @media screen and (max-width: 750px) {
+              font-size: 46px;
+              max-width: 650px;
+            }
+
+            @media screen and (max-width: 690px) {
+              font-size: 40px;
+              max-width: 575px;
+            }
+
+            @media screen and (max-width: 598px) {
+              font-size: 34px;
+              max-width: 500px;
+            }
+
+            @media screen and (max-width: 490px) {
+              font-size: 30px;
+              max-width: 400px;
+            }
+
+            @media screen and (max-width: 432px) {
+              font-size: 26px;
+              max-width: 350px;
+            }
+
+            @media screen and (max-width: 386px) {
+              font-size: 24px;
+              max-width: 350px;
+            }
+
+            @media screen and (max-width: 350px) {
+              font-size: 26px;
+              max-width: 300px;
+            }
         }
     }
 }
