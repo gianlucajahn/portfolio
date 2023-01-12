@@ -179,28 +179,24 @@
 
         @media screen and (max-width: 1020px) {
             max-width: 678px;
-            margin-bottom: 60px;
+            margin-bottom: 20px;
         }
 
         @media screen and (max-width: 750px) {
             max-width: 550px;
-            margin-bottom: 40px;
         }
 
         @media screen and (max-width: 600px) {
             max-width: 465px;
-            margin-bottom: 40px;
         }
 
         @media screen and (max-width: 490px) {
             max-width: 405px;
-            margin-bottom: 40px;
         }
 
         @media screen and (max-width: 425px) {
             max-width: 300px;
             flex-direction: column;
-            margin-bottom: 40px;
         }
 
         .small-card {

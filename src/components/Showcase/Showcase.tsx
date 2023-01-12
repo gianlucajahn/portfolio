@@ -28,7 +28,7 @@ export default function Showcase() {
           className="screen"
           src={require("../../assets/images/screen5.png")}
         />
-        <iframe className="video" src="https://streamable.com/e/1ehwwr?autoplay=1&nocontrols=1" style={{ border: "none", borderRadius: "2px" }} width="530" height="260" allow="autoplay"></iframe>
+        <iframe className="video" src="https://streamable.com/e/1ehwwr?autoplay=1&nocontrols=1" style={{ border: "none", borderRadius: "2px" }} allow="autoplay"></iframe>
       </div>
     </div>
   );
