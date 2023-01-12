@@ -23,7 +23,23 @@
     letter-spacing: -0.025em;
     font-family: "Inter", sans-serif;
     margin-bottom: 12px;
-    margin-left: 470px;
+    margin-left: 24.475%;
+
+    @media screen and (max-width: 1300px) {
+        margin-left: 17.5%;
+    }
+
+    @media screen and (max-width: 1050px) {
+        margin-left: 13.5%;
+    }
+
+    @media screen and (max-width: 586px) {
+        margin-left: 9.25%;
+    }
+
+    @media screen and (max-width: 586px) {
+        font-size: 24px;
+    }
 }
 
 .heading {
@@ -32,6 +48,50 @@
     max-width: 750px;
     letter-spacing: -0.045em;
     line-height: 1.1;
-    margin-left: 466px;
+    margin-left: 24.3%;
     font-weight: 600;
+
+    @media screen and (max-width: 1300px) {
+        margin-left: 17.35%;
+    }
+
+    @media screen and (max-width: 1050px) {
+        margin-left: 13.35%;
+    }
+
+    @media screen and (max-width: 860px) {
+        font-size: 82px;
+    }
+
+    @media screen and (max-width: 770px) {
+        font-size: 72px;
+        max-width: 560px;
+    }
+
+    @media screen and (max-width: 770px) {
+        font-size: 62px;
+        max-width: 500px;
+    }
+
+    @media screen and (max-width: 586px) {
+        margin-left: 9%;
+        max-width: 485px;
+    }
+
+    @media screen and (max-width: 586px) {
+        font-size: 50px;
+    }
+
+    @media screen and (max-width: 428px) {
+        font-size: 44px;
+        max-width: 340px;
+    }
+
+    @media screen and (max-width: 380px) {
+        font-size: 40px;
+    }
+
+    @media screen and (max-width: 340px) {
+        max-width: 280px;
+    }
 }
