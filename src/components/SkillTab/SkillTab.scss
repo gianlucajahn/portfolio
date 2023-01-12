@@ -4,12 +4,38 @@
     gap: 16px;
     padding: 28px;
     border-radius: 28px;
+    align-items: center;
+
+    @media screen and (max-width: 830px) {
+        padding: 16px;
+    }
+
+    @media screen and (max-width: 640px) {
+        max-width: 450px;
+    }
+
+    @media screen and (max-width: 520px) {
+        max-width: 350px;
+    }
+
+    @media screen and (max-width: 420px) {
+        max-width: 300px;
+    }
+
+    @media screen and (max-width: 360px) {
+        max-width: 250px;
+    }
 
     .head {
         align-self: flex-start;
         margin-left: 22px;
         margin-top: 4px;
         font-family: "Inter", sans-serif;
+
+        @media screen and (max-width: 830px) {
+            font-size: 16px;
+            margin-left: 12px;
+        }
     }
 
     .skill-tab-list {
@@ -18,11 +44,50 @@
         gap: 46px;
         padding: 0 22px;
         justify-content: space-between;
+
+        @media screen and (max-width: 1160px) {
+            gap: 28px;
+        }
+
+        @media screen and (max-width: 750px) {
+            gap: 18px;
+            margin-top: 12px;
+        }
+
+        @media screen and (max-width: 640px) {
+            gap: 18px;
+            margin-top: 18px;
+            flex-wrap: wrap;
+        }
+
+        @media screen and (max-width: 520px) {
+            gap: 40px;
+        }
+
+        @media screen and (max-width: 420px) {
+            gap: 20px;
+        }
+
+        @media screen and (max-width: 360px) {
+            gap: 15px;
+        }
     }
 
     .languages {
         gap: 60px;
         padding: 0 26px;
+
+        @media screen and (max-width: 1160px) {
+            gap: 28px;
+        }
+
+        @media screen and (max-width: 420px) {
+            gap: 18px;
+        }
+
+        @media screen and (max-width: 360px) {
+            gap: 0px;
+        }
     }
 
     .one-item {

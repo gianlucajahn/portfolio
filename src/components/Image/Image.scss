@@ -12,11 +12,51 @@
         -moz-user-select: none;
         -webkit-user-select: none;
         -ms-user-select: none;
+
+        @media screen and (max-width: 1020px) {
+            height: 70px;
+        }
+
+        @media screen and (max-width: 885px) {
+            height: 55px;
+        }
+
+        @media screen and (max-width: 750px) {
+            height: 45px;
+        }
+
+        @media screen and (max-width: 640px) {
+            height: 100px;
+        }
+
+        @media screen and (max-width: 520px) {
+            height: 70px;
+        }
+
+        @media screen and (max-width: 420px) {
+            height: 60px;
+        }
+
+        @media screen and (max-width: 360px) {
+            height: 50px;
+        }
     }
 
     h3 {
         font-family: "Inter", sans-serif;
         opacity: 0.75;
         font-size: 14px;
+
+        @media screen and (max-width: 885px) {
+            font-size: 12px;
+        }
+
+        @media screen and (max-width: 750px) {
+            font-size: 10px;
+        }
+
+        @media screen and (max-width: 360px) {
+            margin-bottom: 18px;
+        }
     }
 }

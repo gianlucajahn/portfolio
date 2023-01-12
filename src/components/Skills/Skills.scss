@@ -18,6 +18,10 @@
         flex-direction: column;
         margin-top: 58px;
 
+        @media screen and (max-width: 1160px) {
+            margin-right: 0px;
+        }
+
         .skill-grid-first-row {
             align-self: center;
         }
@@ -27,6 +31,10 @@
             display: flex;
             gap: 18px;
             margin-top: 18px;
+
+            @media screen and (max-width: 640px) {
+                flex-direction: column;
+            }
         }
 
         .skill-grid-third-row {
