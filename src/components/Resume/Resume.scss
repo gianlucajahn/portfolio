@@ -11,6 +11,14 @@
     align-items: center;
     position: relative;
 
+    @media screen and (max-width: 690px) {
+        margin-bottom: 0px;
+    }
+
+    @media screen and (max-width: 540px) {
+        min-height: 50vh;
+    }
+
     #resume {
         position: absolute;
         top: 16px;
@@ -38,6 +46,47 @@
         -webkit-background-clip: text;
         background-clip: text;
         -webkit-text-fill-color: transparent;
+
+        @media screen and (max-width: 810px) {
+            font-size: 82px;
+            max-width: 650px;
+        }
+
+        @media screen and (max-width: 690px) {
+            font-size: 72px;
+            max-width: 600px;
+            margin-bottom: 50px;
+        }
+        
+        @media screen and (max-width: 620px) {
+            font-size: 60px;
+            max-width: 500px;
+            margin-bottom: 50px;
+        }
+
+        @media screen and (max-width: 540px) {
+            font-size: 54px;
+            max-width: 450px;
+            margin-bottom: 10px;
+        }
+
+        @media screen and (max-width: 470px) {
+            font-size: 48px;
+            max-width: 400px;
+            margin-bottom: -40px;
+        }
+
+        @media screen and (max-width: 420px) {
+            font-size: 40px;
+            max-width: 330px;
+            margin-bottom: -40px;
+        }
+
+        @media screen and (max-width: 368px) {
+            font-size: 34px;
+            max-width: 270px;
+            margin-bottom: -40px;
+        }
     }
 
     .resume-box {
@@ -52,6 +101,31 @@
         align-items: center;
         display: flex;
 
+        @media screen and (max-width: 770px) {
+            scale: 0.9;
+        }
+
+        @media screen and (max-width: 690px) {
+            scale: .8;
+        }
+
+        @media screen and (max-width: 620px) {
+            scale: 0.69;
+        }
+
+        @media screen and (max-width: 540px) {
+            scale: 0.6;
+        }
+
+        @media screen and (max-width: 470px) {
+            height: 680px;
+            width: 540px;
+        }
+
+        @media screen and (max-width: 368px) {
+            width: 450px;
+        }
+
         .resume-box-left {
             align-self: flex-end;
             position: relative;
@@ -62,6 +136,14 @@
                 bottom: 0px;
                 -webkit-filter: drop-shadow(0px 0px 2px #222222);
                 filter: drop-shadow(0px 0px 2px #222222);
+
+                @media screen and (max-width: 470px) {
+                    left: 69px;
+                }
+
+                @media screen and (max-width: 368px) {
+                    left: 30px;
+                }
             }
         }
 
@@ -71,6 +153,11 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+
+            @media screen and (max-width: 470px) {
+                margin: 0 auto;
+                margin-bottom: 340px;
+            }
 
             a {
                 text-decoration: none;
