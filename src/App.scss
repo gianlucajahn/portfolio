@@ -99,8 +99,20 @@ div {
   color: #1d1d1f;
   background-color: white;
   border: none;
-  transition: 0.2s border, 0.2s background-color, 0.2s color;
+  transition: 0.3s all;
   font-size: 14px;
+
+  &:hover {
+    background-color: #0064FF;
+
+    h4 {
+      color: white;
+    }
+
+    .dark-icon {
+      fill: white;
+    }
+  }
 }
 
 // dark mode
@@ -110,7 +122,11 @@ div {
   background-color: #141414;
   color: white;
   font-size: 14px;
-  transition: 0.2s background-color, 0.2s color, 0.2s border;
+  transition: 0.3s background-color, 0.2s color, 0.2s border;
+
+  &:hover {
+    background-color: #0064FF;
+  }
 }
 
 .dark-context-menu {
