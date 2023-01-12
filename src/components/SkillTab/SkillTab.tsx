@@ -35,7 +35,7 @@ export default function SkillTab(props: SkillTabProps) {
       {topic === "frameworks" ? (
         <div className="skill-tab-list">
           <Image source="react" name="React" />
-          <Image source="next" name="Next.js" />
+          <Image source={state.darkmode ? "next_2" : "next"} name="Next.js" />
           <Image source="tailwind" name="TailwindCSS" />
         </div>
       ) : null}
