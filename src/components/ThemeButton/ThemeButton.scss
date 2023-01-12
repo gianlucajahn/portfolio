@@ -1,0 +1,33 @@
+.theme-button {
+    border-radius: 14px;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    padding: 12px 18px;
+    position: fixed;
+    z-index: 50;
+    bottom: 71px;
+    left: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.2);
+
+    h4 {
+        margin-bottom: 1px;
+        font-family: "Inter", sans-serif;
+        font-weight: 500;
+        letter-spacing: -0.03em;
+    }
+
+    .light-icon {
+        height: 18px;
+        width: 18px;
+        fill: white;
+    }
+
+    .dark-icon {
+        height: 18px;
+        width: 18px;
+        fill: #1d1d1f;
+    }
+}

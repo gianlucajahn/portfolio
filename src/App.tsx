@@ -18,6 +18,7 @@ import toggleContextMenu from "./utils/helpers/toggleContextMenu";
 import hideContextMenu from "./utils/helpers/hideContextMenu";
 import toast, { Toaster } from "react-hot-toast";
 import Contact from "./components/Contact/Contact";
+import ThemeButton from "./components/ThemeButton/ThemeButton";
 
 // Create store (redux naming convention)
 export const store = createContext<any>(null);
@@ -44,6 +45,7 @@ function App() {
         <Toaster />
         <Cursor />
         <NavBar />
+        <ThemeButton />
         <LanguageSwitch />
         <ContextMenu />
         <Hero />

@@ -42,7 +42,7 @@ export default function LanguageSwitch() {
       className={`btn-language ${state.darkmode ? "dark-language-button" : "light-language-button"}`}
       initial={{ y: 150 }}
       animate={{ y: 0 }}
-      transition={{ type: "tween", duration: 0.3 }}
+      transition={{ type: "spring", duration: 0.5 }}
       onClick={switchLanguage}
     >
       <img src={require(`../../assets/images/${state.language}.png`)} />

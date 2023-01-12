@@ -12,6 +12,12 @@ const reducer = (state = sampleStore, action: any) => {
             language: action.payload
         };
         return loadedLang;
+    case "darkmode/TOGGLE":
+        const toggledDarkmode = {
+          ...state,
+          darkmode: !state.darkmode
+        };
+        return toggledDarkmode;
     default:
       return state;
   }
