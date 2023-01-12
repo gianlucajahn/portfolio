@@ -47,8 +47,8 @@ export default function Contact() {
         viewport={{ once: true }}
       >
         {state.language === "english"
-          ? "Meine Kontakt-Daten."
-          : "My contact information."}
+          ? "So erreichen Sie mich jederzeit."
+          : "Reach out to me any way you want."}
       </motion.h1>
 
       <p className={`${state.darkmode ? "dark-eyebrow" : "light-phrase"}`}>
