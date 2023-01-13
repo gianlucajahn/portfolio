@@ -5,6 +5,7 @@ import { store } from "../../App";
 import { ReactComponent as Download } from "../../assets/images/download.svg";
 import { ReactComponent as Contact } from "../../assets/images/contact.svg";
 import scroll from "../../utils/helpers/scroll";
+import playAudio from "../../utils/helpers/playAudio";
 
 export default function Resume() {
   const [state, dispatch] = useContext(store);
@@ -54,7 +55,11 @@ export default function Resume() {
             download="cv_gianlucajahn.pdf"
             href={require("../../assets/documents/cv_gianlucajahn_german.pdf")}
           >
-            <button className="download">
+            <button
+              className="download"
+              onMouseDown={playAudio}
+              onMouseUp={playAudio}
+            >
               <Download
                 className="download-svg svg"
                 style={{ height: "22px" }}
@@ -63,7 +68,12 @@ export default function Resume() {
             </button>
           </a>
 
-          <button className="contact" onClick={(e) => scroll("contact")}>
+          <button
+            className="contact"
+            onClick={(e) => scroll("contact")}
+            onMouseDown={playAudio}
+            onMouseUp={playAudio}
+          >
             <Contact className="contact-svg svg" style={{ height: "20px" }} />
             {state.language === "english" ? "Kontakt-Daten" : "Contact me"}
           </button>

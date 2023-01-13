@@ -3,6 +3,7 @@ import emailjs from "@emailjs/browser";
 import "./ContactForm.scss";
 import { store } from "../../App";
 import toast, { Toaster } from "react-hot-toast";
+import playAudio from "../../utils/helpers/playAudio";
 
 export default function ContactForm() {
   const form = useRef<any>(null);
@@ -101,6 +102,8 @@ export default function ContactForm() {
         type="submit"
         value={state.language === "english" ? "Absenden" : "Submit"}
         className="submit"
+        onMouseDown={playAudio}
+        onMouseUp={playAudio}
       />
     </form>
   );

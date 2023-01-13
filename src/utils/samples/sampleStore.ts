@@ -1,6 +1,7 @@
 const sampleStore = {
     language: "english",
-    darkmode: false
+    darkmode: false,
+    sounds: true,
 }
 
 export default sampleStore;

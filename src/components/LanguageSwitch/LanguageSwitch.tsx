@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import "./LanguageSwitch.scss";
 import { store } from "../../App";
+import playAudio from "../../utils/helpers/playAudio";
 
 export default function LanguageSwitch() {
   const [state, dispatch] = useContext(store);
@@ -44,6 +45,8 @@ export default function LanguageSwitch() {
       animate={{ y: 0 }}
       transition={{ type: "spring", duration: 0.5 }}
       onClick={switchLanguage}
+      onMouseDown={playAudio}
+      onMouseUp={playAudio}
     >
       <img src={require(`../../assets/images/${state.language}.png`)} />
       Translate to {state.language === "english" ? "English" : "German"}

@@ -26,6 +26,12 @@ const reducer = (state = sampleStore, action: any) => {
         darkmode: action.payload,
       };
       return loadedDarkmode;
+    case "sounds/TOGGLE":
+      const toggledSounds = {
+        ...state,
+        sounds: !state.sounds,
+      };
+      return toggledSounds;
     default:
       return state;
   }

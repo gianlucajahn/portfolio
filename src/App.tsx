@@ -20,6 +20,7 @@ import toast, { Toaster } from "react-hot-toast";
 import Contact from "./components/Contact/Contact";
 import ThemeButton from "./components/ThemeButton/ThemeButton";
 import clickSound from "./assets/audio/click.mp3";
+import playAudio from "./utils/helpers/playAudio";
 
 // Create store (redux naming convention)
 export const store = createContext<any>(null);
@@ -31,13 +32,6 @@ const StoreProvider = ({ children }: any) => (
   </store.Provider>
 );
 
-// add clicking sound on mouseUp/Down
-const playAudio = (e: any) => {
-  const audio = new Audio(clickSound);
-  audio.volume = 0.6;
-  audio.play();
-}
-
 function App() {
   return (
     <StoreProvider>
@@ -46,8 +40,8 @@ function App() {
         onClick={hideContextMenu}
         onMouseMove={(e) => setCursorLocation(e)}
         onScroll={(e) => setCursorLocation(e)}
-        onMouseDown={(e) => { setCursorAppearance(e); playAudio(e) }}
-        onMouseUp={(e) => { setCursorAppearance(e); playAudio(e) }}
+        onMouseDown={(e) => setCursorAppearance(e)}
+        onMouseUp={(e) => setCursorAppearance(e)}
         onContextMenu={(e) => toggleContextMenu(e)}
       >
         <Toaster />

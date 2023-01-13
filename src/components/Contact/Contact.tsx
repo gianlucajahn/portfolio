@@ -8,6 +8,7 @@ import { ReactComponent as WhatsApp } from "../../assets/images/whatsapp.svg";
 import toast, { Toaster } from "react-hot-toast";
 import ContactForm from "../ContactForm/ContactForm";
 import "./Contact.scss";
+import playAudio from "../../utils/helpers/playAudio";
 
 export default function Contact() {
   const [state, dispatch] = useContext(store);
@@ -18,22 +19,30 @@ export default function Contact() {
       icon: "📧",
       position: "top-left",
       style: {
-        border: state.darkmode ? "2px solid hsla(0,0%,51.4%,.16)" : "1px solid #ebebeb",
+        border: state.darkmode
+          ? "2px solid hsla(0,0%,51.4%,.16)"
+          : "1px solid #ebebeb",
         boxShadow: "0px 3px 6px rgba(0, 0, 0, 0.225)",
         borderRadius: "14px",
         fontFamily: "Inter",
         color: state.darkmode ? "white" : "#1d1d1f",
         fontSize: "14px",
-        backgroundColor: state.darkmode ? "#141414" : ""
+        backgroundColor: state.darkmode ? "#141414" : "",
       },
     });
   };
 
   return (
-    <div className={`contact-container ${state.darkmode ? "dark-bg-2" : "light-bg-2"}`}>
+    <div
+      className={`contact-container ${
+        state.darkmode ? "dark-bg-2" : "light-bg-2"
+      }`}
+    >
       <div className="anchor" id="contact" />
       <motion.h3
-        className={`eyebrow ${state.darkmode ? "dark-eyebrow" : "light-eyebrow"}`}
+        className={`eyebrow ${
+          state.darkmode ? "dark-eyebrow" : "light-eyebrow"
+        }`}
         initial={{ y: 200 }}
         whileInView={{ y: 0 }}
         viewport={{ once: true }}
@@ -41,7 +50,9 @@ export default function Contact() {
         {state.language === "english" ? "Kontakt" : "Contact"}
       </motion.h3>
       <motion.h1
-        className={`heading ${state.darkmode ? "dark-heading" : "light-heading"}`}
+        className={`heading ${
+          state.darkmode ? "dark-heading" : "light-heading"
+        }`}
         initial={{ y: 150 }}
         whileInView={{ y: 0 }}
         viewport={{ once: true }}
@@ -62,47 +73,104 @@ export default function Contact() {
           initial={{ x: -250, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           viewport={{ once: true }}
-          transition={{ opacity: { duration: 0.3, delay: 0.3 }, x: { duration: 0.8, type: "spring", delay: 0.25 } }}
+          transition={{
+            opacity: { duration: 0.3, delay: 0.3 },
+            x: { duration: 0.8, type: "spring", delay: 0.25 },
+          }}
         >
           <ContactForm />
         </motion.div>
 
         <motion.section
-          className={`contact-socials-container ${state.darkmode ? "dark-card" : "light-card"} ${state.darkmode ? "dark-shadow" : "light-shadow"}`}
+          className={`contact-socials-container ${
+            state.darkmode ? "dark-card" : "light-card"
+          } ${state.darkmode ? "dark-shadow" : "light-shadow"}`}
           initial={{ x: 250, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           viewport={{ once: true }}
-          transition={{ opacity: { duration: 0.3, delay: 0.3 }, x: { duration: 0.8, type: "spring", delay: 0.25 } }}
+          transition={{
+            opacity: { duration: 0.3, delay: 0.3 },
+            x: { duration: 0.8, type: "spring", delay: 0.25 },
+          }}
         >
-          <a target="_blank" href="https://www.linkedin.com/in/gianlucajahn/">
-            <button className={`contact-socials-item linkedin ${state.darkmode ? "dark-field" : ""}`}>
-              <LinkedIn className={`svg ${state.darkmode ? "dark-svg" : "light-svg"}`} />
+          <a
+            target="_blank"
+            href="https://www.linkedin.com/in/gianlucajahn/"
+            onMouseDown={playAudio}
+            onMouseUp={playAudio}
+          >
+            <button
+              className={`contact-socials-item linkedin ${
+                state.darkmode ? "dark-field" : ""
+              }`}
+            >
+              <LinkedIn
+                className={`svg ${state.darkmode ? "dark-svg" : "light-svg"}`}
+              />
               LinkedIn
             </button>
           </a>
 
-          <a target="_blank" href="https://github.com/gianlucajahn">
-            <button className={`contact-socials-item github ${state.darkmode ? "dark-field" : ""}`}>
-              <GitHub className={`svg ${state.darkmode ? "dark-svg" : "light-svg"}`} />
+          <a
+            target="_blank"
+            href="https://github.com/gianlucajahn"
+            onMouseDown={playAudio}
+            onMouseUp={playAudio}
+          >
+            <button
+              className={`contact-socials-item github ${
+                state.darkmode ? "dark-field" : ""
+              }`}
+            >
+              <GitHub
+                className={`svg ${state.darkmode ? "dark-svg" : "light-svg"}`}
+              />
               GitHub
             </button>
           </a>
 
-          <a target="_blank" href="https://twitter.com/GianlucaJahn">
-            <button className={`contact-socials-item twitter ${state.darkmode ? "dark-field" : ""}`}>
-              <Twitter className={`svg ${state.darkmode ? "dark-svg" : "light-svg"}`} />
+          <a
+            target="_blank"
+            href="https://twitter.com/GianlucaJahn"
+            onMouseDown={playAudio}
+            onMouseUp={playAudio}
+          >
+            <button
+              className={`contact-socials-item twitter ${
+                state.darkmode ? "dark-field" : ""
+              }`}
+            >
+              <Twitter
+                className={`svg ${state.darkmode ? "dark-svg" : "light-svg"}`}
+              />
               Twitter
             </button>
           </a>
 
-          <a target="_blank" href="https://wa.me/+4915233760445">
-            <button className={`contact-socials-item whatsapp ${state.darkmode ? "dark-field" : ""}`}>
-              <WhatsApp className={`svg ${state.darkmode ? "dark-svg" : "light-svg"}`} />
+          <a
+            target="_blank"
+            href="https://wa.me/+4915233760445"
+            onMouseDown={playAudio}
+            onMouseUp={playAudio}
+          >
+            <button
+              className={`contact-socials-item whatsapp ${
+                state.darkmode ? "dark-field" : ""
+              }`}
+            >
+              <WhatsApp
+                className={`svg ${state.darkmode ? "dark-svg" : "light-svg"}`}
+              />
               WhatsApp
             </button>
           </a>
 
-          <button className="email" onClick={copyEmail}>
+          <button
+            className="email"
+            onClick={copyEmail}
+            onMouseDown={playAudio}
+            onMouseUp={playAudio}
+          >
             {state.language === "english" ? "E-Mail kopieren" : "Copy my email"}
           </button>
         </motion.section>

@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import "./Projects.scss";
 import { motion } from "framer-motion";
 import { store } from "../../App";
+import playAudio from "../../utils/helpers/playAudio";
 
 export default function Projects() {
   const [state, dispatch] = useContext(store);
@@ -33,6 +34,8 @@ export default function Projects() {
           href="https://gianlucajahn.github.io/react-ecommerce-store/"
           className="ecom"
           target="_blank"
+          onMouseDown={playAudio}
+          onMouseUp={playAudio}
         >
           <div className="tooltip upper ecom" />
           <motion.img
@@ -47,6 +50,8 @@ export default function Projects() {
           href="https://gianlucajahn.github.io/CV-Application/"
           className="cv"
           target="_blank"
+          onMouseDown={playAudio}
+          onMouseUp={playAudio}
         >
           <div className="tooltip upper cv" />
           <motion.img
@@ -61,6 +66,8 @@ export default function Projects() {
           href="https://gianlucajahn.github.io/typescript-reddit-clone/"
           className="reddit lower"
           target="_blank"
+          onMouseDown={playAudio}
+          onMouseUp={playAudio}
         >
           <div className="tooltip lower reddit" />
           <motion.img
@@ -75,6 +82,8 @@ export default function Projects() {
           href="https://gianlucajahn.github.io/macOS-react/"
           className="mac lower"
           target="_blank"
+          onMouseDown={playAudio}
+          onMouseUp={playAudio}
         >
           <div className="tooltip lower mac" />
           <motion.img
@@ -90,6 +99,8 @@ export default function Projects() {
         href="https://github.com/gianlucajahn"
         target="_blank"
         className="more"
+        onMouseDown={playAudio}
+        onMouseUp={playAudio}
       >
         {state.language === "english" ? "Mehr anzeigen" : "Show More"}
       </a>

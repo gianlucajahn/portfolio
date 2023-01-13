@@ -3,6 +3,7 @@ import "./Hero.scss";
 import { motion } from "framer-motion";
 import { store } from "../../App";
 import scroll from "../../utils/helpers/scroll";
+import playAudio from "../../utils/helpers/playAudio";
 
 export default function Hero() {
   const [state, dispatch] = useContext(store);
@@ -63,6 +64,8 @@ export default function Hero() {
 
       <motion.button
         onClick={(e) => scroll("about-me")}
+        onMouseDown={playAudio}
+        onMouseUp={playAudio}
         initial={{ opacity: 0, y: 140 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{
