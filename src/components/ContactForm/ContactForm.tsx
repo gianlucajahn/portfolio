@@ -67,7 +67,7 @@ export default function ContactForm() {
       <div className="input-container">
         <input
           ref={input1}
-          className={`field ${state.darkmode ? "dark-field" : "light-field"}`}
+          className={`field data ${state.darkmode ? "dark-field" : "light-field"}`}
           type="text"
           name="user_name"
           placeholder={state.language === "english" ? "Ihr Name" : "Your name"}
@@ -75,7 +75,7 @@ export default function ContactForm() {
         />
         <input
           ref={input2}
-          className={`field ${state.darkmode ? "dark-field" : "light-field"}`}
+          className={`field data ${state.darkmode ? "dark-field" : "light-field"}`}
           type="email"
           name="user_email"
           placeholder={
