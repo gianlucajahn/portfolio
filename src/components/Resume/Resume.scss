@@ -73,7 +73,7 @@
         @media screen and (max-width: 470px) {
             font-size: 48px;
             max-width: 400px;
-            margin-bottom: -40px;
+            margin-bottom: 0px;
         }
 
         @media screen and (max-width: 420px) {
@@ -118,12 +118,16 @@
         }
 
         @media screen and (max-width: 470px) {
-            height: 680px;
-            width: 540px;
+            height: 500px;
+            width: 350px;
+            margin-top: 100px;
+            scale: 1;
         }
 
         @media screen and (max-width: 368px) {
-            width: 450px;
+            width: 295px;
+            height: 500px;
+            scale: 1;
         }
 
         .resume-box-left {
@@ -138,7 +142,8 @@
                 filter: drop-shadow(0px 0px 2px #222222);
 
                 @media screen and (max-width: 470px) {
-                    left: 69px;
+                    left: 60px;
+                    max-height: 212px;
                 }
 
                 @media screen and (max-width: 368px) {
@@ -156,7 +161,7 @@
 
             @media screen and (max-width: 470px) {
                 margin: 0 auto;
-                margin-bottom: 340px;
+                margin-bottom: 185px;
             }
 
             a {
@@ -169,6 +174,11 @@
                 font-family: "Inter", sans-serif;
                 color: white;
                 text-align: center;
+
+                @media screen and (max-width: 360px) {
+                    font-size: 14px;
+                    max-width: 225px;
+                }
             }
 
             button {
