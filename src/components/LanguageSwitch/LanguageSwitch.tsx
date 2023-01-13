@@ -10,17 +10,10 @@ export default function LanguageSwitch() {
 
   useEffect(() => {
     let language = localStorage.getItem("language");
-    let darkmode = localStorage.getItem("darkmode");
     if (language !== null && language !== undefined) {
       dispatch({
         type: 'language/INIT',
         payload: language
-      });
-    }
-    if (darkmode !== null && darkmode !== undefined) {
-      dispatch({
-        type: 'darkmode/INIT',
-        payload: darkmode
       });
     }
   }, [])
@@ -35,7 +28,6 @@ export default function LanguageSwitch() {
         return;
     }
     localStorage.setItem("language", state.language);
-    localStorage.setItem("darkmode", state.darkmode);
     window.location.reload();
   }, [renderAmount])
 
