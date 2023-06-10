@@ -1,5 +1,5 @@
 const sampleStore = {
-    language: "english",
+    language: "german",
     darkmode: false,
     sounds: true,
 }
