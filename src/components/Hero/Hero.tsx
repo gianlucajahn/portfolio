@@ -46,7 +46,7 @@ export default function Hero() {
           y: { duration: 0.6, type: "spring" },
         }}
       >
-        {state.language === "english" ? "Frontend-Entwickler" : "Frontend Developer"}
+        {state.language === "english" ? "Software-Entwickler" : "Software Engineer"}
       </motion.h1>
 
       <motion.h4
